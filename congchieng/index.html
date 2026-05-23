@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Trang giới thiệu Không gian Văn hóa Cồng Chiêng Tây Nguyên — Di sản văn hóa phi vật thể đại diện của nhân loại, được UNESCO công nhận năm 2005." />
+  <title>Cồng Chiêng Tây Nguyên | Di sản UNESCO</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ============================================================
+       HEADER —navigation bar
+       ============================================================ -->
+  <header class="header" id="site-header">
+    <!-- Main Header: logo + navigation + search -->
+    <div class="main-header">
+      <div class="container header-inner">
+        <!-- Logo -->
+        <a href="#hero" class="header-logo" id="header-logo">
+          <span class="header-logo-icon">🎵</span>
+          <span class="header-logo-text">Cồng Chiêng</span>
+        </a>
+
+        <!-- Navigation chính -->
+        <nav class="nav" id="main-nav">
+          <!-- Rendered by jQuery -->
+        </nav>
+
+        <!-- Nút hamburger cho mobile -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Mở menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main>
+    <!-- HERO — Banner chính toàn màn hình -->
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content fade-up">
+        <div class="badge">
+          <i class="fas fa-award"></i>
+          Di sản UNESCO từ năm 2005
+        </div>
+
+        <h1 class="hero-title">
+          Không Gian Văn Hóa<br />
+          <span class="highlight">Cồng Chiêng</span> Tây Nguyên
+        </h1>
+
+        <p class="hero-subtitle">
+          Hành trình khám phá di sản văn hóa phi vật thể đại diện của nhân
+          loại — nơi âm thanh cồng chiêng vang vọng giữa núi rừng Tây Nguyên
+          hùng vĩ.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#multimedia" class="btn btn-primary">
+            <i class="fas fa-play-circle"></i> Trải nghiệm ngay
+          </a>
+          <a href="#gioi-thieu" class="btn btn-secondary">
+            <i class="fas fa-book-open"></i> Tìm hiểu thêm
+          </a>
+        </div>
+
+        <!-- Thống kê nổi bật -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Tỉnh Tây Nguyên</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="17">0</span>
+            <span class="stat-label">Dân tộc thiểu số</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2005">0</span>
+            <span class="stat-label">Năm UNESCO công nhận</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIỚI THIỆU — 4 cards thông tin -->
+    <section id="gioi-thieu" class="section">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Giới thiệu</div>
+          <h2 class="section-title">
+            Cồng Chiêng — Linh hồn của núi rừng Tây Nguyên
+          </h2>
+          <p class="section-subtitle">
+            Không gian văn hóa Cồng chiêng Tây Nguyên trải rộng trên 5 tỉnh:
+            Kon Tum, Gia Lai, Đắk Lắk, Đắk Nông và Lâm Đồng.
+          </p>
+        </div>
+
+        <div class="intro-grid" id="intro-grid">
+          <!-- Rendered by jQuery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MULTIMEDIA — Video + Audio player -->
+    <section id="multimedia" class="section section-darker">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Trải nghiệm đa phương tiện</div>
+          <h2 class="section-title">Nghe &amp; Xem Cồng Chiêng</h2>
+          <p class="section-subtitle">
+            Hãy nhắm mắt lại, lắng nghe âm thanh cồng chiêng vang vọng giữa
+            đại ngàn và cảm nhận linh hồn của Tây Nguyên.
+          </p>
+        </div>
+
+        <div class="media-grid">
+          <!-- Video -->
+          <div class="media-box fade-up">
+            <div class="media-label">
+              <i class="fas fa-video"></i> Video tư liệu
+            </div>
+            <div class="video-wrapper">
+              <video id="main-video" controls poster="images/ceremony.png" preload="none">
+                <source src="video/congchieng.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p class="media-desc">
+              <strong>Lễ hội Cồng Chiêng Tây Nguyên</strong>
+              — Khoảnh khắc thiêng liêng khi tiếng cồng chiêng vang lên trong
+              đêm hội, kết nối con người với thần linh và đất trời.
+            </p>
+          </div>
+
+          <!-- Audio Player -->
+          <div class="media-box fade-up">
+            <div class="media-label">
+              <i class="fas fa-headphones"></i> Bộ sưu tập âm thanh
+            </div>
+            <div class="audio-list" id="audio-list">
+              <!-- Rendered by jQuery -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY — Lưới ảnh có filter -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Thư viện ảnh</div>
+          <h2 class="section-title">Khoảnh Khắc Di Sản</h2>
+          <p class="section-subtitle">
+            Những bức ảnh ghi lại vẻ đẹp và sức sống mãnh liệt của văn hóa
+            Cồng Chiêng qua các thế hệ.
+          </p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="gallery-filters fade-up" id="gallery-filters">
+          <button class="filter-btn active" data-filter="all">Tất cả</button>
+          <button class="filter-btn" data-filter="ceremony">Nghi lễ</button>
+          <button class="filter-btn" data-filter="instrument">Nhạc cụ</button>
+          <button class="filter-btn" data-filter="landscape">
+            Phong cảnh
+          </button>
+          <button class="filter-btn" data-filter="people">Con người</button>
+        </div>
+
+        <!-- Gallery grid -->
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX — Phóng to ảnh fullscreen -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Đóng">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Ảnh trước">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="lightbox-nav next" id="lightbox-next" aria-label="Ảnh kế">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox image" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <!-- TIMELINE — Dòng thời gian lịch sử -->
+    <section id="timeline" class="section section-darker">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Dòng thời gian</div>
+          <h2 class="section-title">Lịch sử Cồng Chiêng</h2>
+          <p class="section-subtitle">
+            Hành trình hàng nghìn năm của văn hóa Cồng Chiêng từ buổi sơ khai
+            đến khi được thế giới công nhận.
+          </p>
+        </div>
+
+        <div class="timeline" id="timeline-container">
+          <!-- Rendered by jQuery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DÂN TỘC — Cards dân tộc Tây Nguyên -->
+    <section id="dan-toc" class="section">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Dân tộc &amp; Vùng đất</div>
+          <h2 class="section-title">Những Người Giữ Lửa</h2>
+          <p class="section-subtitle">
+            Các dân tộc thiểu số Tây Nguyên — những nghệ nhân gìn giữ và
+            truyền lửa văn hóa Cồng Chiêng qua bao thế hệ.
+          </p>
+        </div>
+
+        <div class="ethnic-grid" id="ethnic-grid">
+          <!-- Rendered by jQuery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LIÊN HỆ — Form gửi tin nhắn -->
+    <section id="lien-he" class="section section-darker">
+      <div class="container">
+        <div class="section-header-center fade-up">
+          <div class="badge-small">Liên hệ</div>
+          <h2 class="section-title">Gửi Tin Nhắn Cho Chúng Tôi</h2>
+          <p class="section-subtitle">
+            Bạn có thắc mắc hoặc muốn đóng góp cho việc bảo tồn di sản?
+            Hãy để lại tin nhắn, chúng tôi sẽ phản hồi sớm nhất.
+          </p>
+        </div>
+
+        <div class="contact-wrapper fade-up">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Họ và tên <span class="required">*</span></label>
+              <input type="text" id="contact-name" placeholder="Nguyễn Văn A" />
+              <span class="form-error" id="err-name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" placeholder="example@email.com" />
+              <span class="form-error" id="err-email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-msg">Tin nhắn <span class="required">*</span></label>
+              <textarea id="contact-msg" rows="5" placeholder="Nội dung tin nhắn..."></textarea>
+              <span class="form-error" id="err-msg"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <i class="fas fa-paper-plane"></i> Gửi tin nhắn
+            </button>
+
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Gửi thành công! Cảm ơn bạn đã liên hệ.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA — Kêu gọi bảo tồn -->
+    <section class="section cta-section fade-up">
+      <div class="container">
+        <h2 class="cta-title">
+          Cùng bảo tồn di sản<br />
+          <span class="highlight">Cồng Chiêng Tây Nguyên</span>
+        </h2>
+        <p class="cta-desc">
+          Mỗi tiếng cồng chiêng vang lên là một lời nhắn gửi từ quá khứ, hãy
+          cùng nhau giữ gìn và phát huy di sản quý báu này cho các thế hệ mai
+          sau.
+        </p>
+        <a href="#multimedia" class="btn btn-primary">
+          <i class="fas fa-headphones"></i> Nghe âm thanh Cồng Chiêng
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Cột 1: Thông tin chính -->
+      <div class="footer-col">
+        <div class="footer-logo">Cồng Chiêng Tây Nguyên</div>
+        <p>
+          Trang giới thiệu Không gian Văn hóa Cồng Chiêng Tây Nguyên — Di sản
+          văn hóa phi vật thể đại diện của nhân loại.
+        </p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61570372845703#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <!-- Cột 2: Điều hướng -->
+      <div class="footer-col">
+        <h4>Điều hướng</h4>
+        <a href="#hero">Trang chủ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#multimedia">Trải nghiệm</a>
+        <a href="#gallery">Thư viện ảnh</a>
+        <a href="#timeline">Dòng thời gian</a>
+        <a href="#lien-he">Liên hệ</a>
+      </div>
+
+      <!-- Cột 3: Tài nguyên -->
+      <div class="footer-col">
+        <h4>Tài nguyên</h4>
+        <a href="https://dsvh.gov.vn/mot-so-noi-dung-huong-dan-va-cac-bieu-mau-ho-so-de-cu-di-san-van-hoa-phi-vat-the-unesco-1694"
+          target="_blank">
+          Hồ sơ Di sản UNESCO
+        </a>
+        <a href="https://daklakmuseum.vn/" target="_blank">
+          Bảo tàng Dân tộc học Việt Nam
+        </a>
+        <a href="http://hoidisanvanhoa.vn/dac-sac-cac-nhac-cu-dan-toc-viet/" target="_blank">
+          Kho nhạc cụ dân tộc
+        </a>
+      </div>
+
+      <!-- Cột 4: Liên hệ -->
+      <div class="footer-col">
+        <h4>Liên hệ</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Tây Nguyên, Việt Nam</p>
+        <p><i class="fas fa-phone"></i> 0123 456 789</p>
+        <p><i class="fas fa-envelope"></i> congchiengtaynguyen@gmail.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        © 2026 Văn hóa Cồng Chiêng Tây Nguyên. Được xây dựng với trái tim để bảo tồn di sản.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Nút Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Lên đầu trang">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts: jQuery local + script chính -->
+  <script src="jquery-4.0.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
