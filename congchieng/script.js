@@ -161,7 +161,6 @@ $(document).ready(function () {
     },
   ];
 
-
   // Dữ liệu các dân tộc
   const ethnicData = [
     {
@@ -231,6 +230,9 @@ $(document).ready(function () {
       '<a href="' +
       item.href +
       '" class="nav-link">' +
+      '<i class="' +
+      item.icon +
+      '"></i> ' +
       item.label +
       " " +
       chevron +
@@ -397,19 +399,21 @@ $(document).ready(function () {
   renderEthnic();
 
   // Fetch gallery data từ data.json
-  fetch('data.json')
-    .then(function(response) {
-      if (!response.ok) throw new Error('HTTP error: ' + response.status);
+  fetch("data.json")
+    .then(function (response) {
+      if (!response.ok) throw new Error("HTTP error: " + response.status);
       return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
       galleryData = data.gallery;
-      renderGallery('all');
+      renderGallery("all");
       observeFadeUp();
     })
-    .catch(function(err) {
-      console.error('Không tải được gallery:', err);
-      $('#gallery-grid').html('<p style="text-align:center;padding:40px;color:#9a958d">Không thể tải thư viện ảnh.</p>');
+    .catch(function (err) {
+      console.error("Không tải được gallery:", err);
+      $("#gallery-grid").html(
+        '<p style="text-align:center;padding:40px;color:#9a958d">Không thể tải thư viện ảnh.</p>',
+      );
     });
 
   /*CÁC SỰ KIỆN TƯƠNG TÁC (EVENTS) */
@@ -634,59 +638,59 @@ $(document).ready(function () {
     };
   });
 
-/* FORM LIÊN HỆ + VALIDATION */
+  /* FORM LIÊN HỆ + VALIDATION */
 
-$("#contact-form").on("submit", function (e) {
-  e.preventDefault();
+  $("#contact-form").on("submit", function (e) {
+    e.preventDefault();
 
-  var name = $("#contact-name").val().trim();
-  var email = $("#contact-email").val().trim();
-  var msg = $("#contact-msg").val().trim();
-  var valid = true;
+    var name = $("#contact-name").val().trim();
+    var email = $("#contact-email").val().trim();
+    var msg = $("#contact-msg").val().trim();
+    var valid = true;
 
-  // Reset lỗi cũ
-  $(".form-error").text("");
-  $(".form-group input, .form-group textarea").removeClass("input-error");
+    // Reset lỗi cũ
+    $(".form-error").text("");
+    $(".form-group input, .form-group textarea").removeClass("input-error");
 
-  // Validate họ tên
-  if (name === "") {
-    $("#err-name").text("Vui lòng nhập họ và tên.");
-    $("#contact-name").addClass("input-error");
-    valid = false;
-  }
+    // Validate họ tên
+    if (name === "") {
+      $("#err-name").text("Vui lòng nhập họ và tên.");
+      $("#contact-name").addClass("input-error");
+      valid = false;
+    }
 
-  // Validate email
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (email === "") {
-    $("#err-email").text("Vui lòng nhập email.");
-    $("#contact-email").addClass("input-error");
-    valid = false;
-  } else if (!emailRegex.test(email)) {
-    $("#err-email").text("Email không đúng định dạng.");
-    $("#contact-email").addClass("input-error");
-    valid = false;
-  }
+    // Validate email
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email === "") {
+      $("#err-email").text("Vui lòng nhập email.");
+      $("#contact-email").addClass("input-error");
+      valid = false;
+    } else if (!emailRegex.test(email)) {
+      $("#err-email").text("Email không đúng định dạng.");
+      $("#contact-email").addClass("input-error");
+      valid = false;
+    }
 
-  // Validate tin nhắn
-  if (msg === "") {
-    $("#err-msg").text("Vui lòng nhập nội dung tin nhắn.");
-    $("#contact-msg").addClass("input-error");
-    valid = false;
-  }
+    // Validate tin nhắn
+    if (msg === "") {
+      $("#err-msg").text("Vui lòng nhập nội dung tin nhắn.");
+      $("#contact-msg").addClass("input-error");
+      valid = false;
+    }
 
-  // Nếu hợp lệ → hiện thông báo thành công
-  if (valid) {
-    $("#contact-form input, #contact-form textarea").val("");
-    $("#form-success").fadeIn(300);
-    setTimeout(function () {
-      $("#form-success").fadeOut(300);
-    }, 4000);
-  }
-});
+    // Nếu hợp lệ → hiện thông báo thành công
+    if (valid) {
+      $("#contact-form input, #contact-form textarea").val("");
+      $("#form-success").fadeIn(300);
+      setTimeout(function () {
+        $("#form-success").fadeOut(300);
+      }, 4000);
+    }
+  });
 
-// Xóa lỗi khi người dùng bắt đầu nhập lại
-$("#contact-form input, #contact-form textarea").on("input", function () {
-  $(this).removeClass("input-error");
-  $(this).siblings(".form-error").text("");
-});
+  // Xóa lỗi khi người dùng bắt đầu nhập lại
+  $("#contact-form input, #contact-form textarea").on("input", function () {
+    $(this).removeClass("input-error");
+    $(this).siblings(".form-error").text("");
+  });
 });
