@@ -230,6 +230,7 @@ h3 {
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  z-index: 1100; /* Nằm trên header (1000) và mọi section */
 }
 
 .nav-item:hover .nav-dropdown {
@@ -1016,14 +1017,21 @@ h3 {
   /* Dropdown cấp 2 — hiển thị trực tiếp trên mobile */
   .nav .nav-dropdown {
     position: static;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;           /* Ẩn mặc định */
+    visibility: hidden;
     transform: none;
     box-shadow: none;
     border: none;
     background: rgba(255, 255, 255, 0.03);
     padding: 0 0 5px 15px;
     min-width: auto;
+    z-index: auto;
+  }
+
+  /* Chỉ hiện dropdown khi nav sidebar đang mở */
+  .nav.active .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
   }
 
   .mobile-menu-btn {

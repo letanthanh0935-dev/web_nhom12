@@ -439,12 +439,7 @@ $(document).ready(function () {
       $(".nav").removeClass("active");
       $("#mobile-overlay").removeClass("active");
       $("#mobile-menu-btn i").removeClass("fa-times").addClass("fa-bars");
-
-      // Ẩn dropdown rồi khôi phục (để reset trạng thái hover)
-      $(".nav-dropdown").css({ opacity: "0", visibility: "hidden" });
-      setTimeout(function () {
-        $(".nav-dropdown").css({ opacity: "", visibility: "" });
-      }, 300);
+      $(".nav-dropdown").css({ opacity: "", visibility: "" });
     }
   });
 
@@ -638,7 +633,6 @@ $(document).ready(function () {
       if (progress) progress.style.width = "0%";
     };
   });
-
 
 /* FORM LIÊN HỆ + VALIDATION */
 
