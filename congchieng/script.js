@@ -638,7 +638,7 @@ $(document).ready(function () {
       if (progress) progress.style.width = "0%";
     };
   });
-});
+
 
 /* FORM LIÊN HỆ + VALIDATION */
 
@@ -694,4 +694,5 @@ $("#contact-form").on("submit", function (e) {
 $("#contact-form input, #contact-form textarea").on("input", function () {
   $(this).removeClass("input-error");
   $(this).siblings(".form-error").text("");
+});
 });
