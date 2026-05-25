@@ -107,10 +107,6 @@ $(document).ready(function () {
     },
   ];
 
-  // ============================================================
-  //  FETCH GALLERY TỪ API BÊN NGOÀI (JSON/Fetch)
-  // ============================================================
-
   // URL API bên ngoài
   var GALLERY_API_URL = "https://api.npoint.io/5ef3e517e55fd8eb89f5";
 
@@ -407,8 +403,11 @@ $(document).ready(function () {
   // Fetch gallery từ API bên ngoài
   fetch(GALLERY_API_URL)
     .then(function (response) {
-      if (!response.ok) throw new Error("HTTP " + response.status);
-      return response.json();
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("HTTP " + response.status);
+      }
     })
     .then(function (data) {
       if (Array.isArray(data)) {
