@@ -404,13 +404,7 @@ $(document).ready(function () {
   renderTimeline();
   renderEthnic();
 
-  // Fetch gallery data từ data.json
   // Fetch gallery từ API bên ngoài
-  $("#gallery-grid").html(
-    '<p style="text-align:center;padding:40px;color:#9a958d">' +
-      '<i class="fas fa-spinner fa-spin"></i> Đang tải thư viện ảnh...</p>',
-  );
-
   fetch(GALLERY_API_URL)
     .then(function (response) {
       if (!response.ok) throw new Error("HTTP " + response.status);
@@ -567,44 +561,6 @@ $(document).ready(function () {
     });
   }
   observeFadeUp();
-
-  /*  ĐẾM SỐ THỐNG KÊ (COUNTER ANIMATION)*/
-
-  // Quan sát khu vực thống kê, bắt đầu đếm khi hiển thị
-  var statsObserver = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          startCounters();
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 },
-  );
-
-  var heroStats = document.querySelector(".hero-stats");
-  if (heroStats) statsObserver.observe(heroStats);
-
-  // Chạy animation đếm số cho tất cả .stat-number
-  function startCounters() {
-    document.querySelectorAll(".stat-number").forEach(function (counter) {
-      var target = parseInt(counter.getAttribute("data-target"));
-      var step = Math.ceil(target / 100) || 1;
-      var interval = Math.abs(Math.floor(2000 / target));
-      var current = 0;
-
-      var timer = setInterval(function () {
-        current += step;
-        if (current >= target) {
-          counter.innerText = target;
-          clearInterval(timer);
-        } else {
-          counter.innerText = current;
-        }
-      }, interval);
-    });
-  }
 
   /* TRÌNH PHÁT NHẠC (AUDIO PLAYER) */
 
