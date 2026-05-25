@@ -43,7 +43,6 @@ $(document).ready(function () {
     },
     { label: "Thư viện ảnh", href: "#gallery", icon: "fas fa-images" },
     { label: "Dòng thời gian", href: "#timeline", icon: "fas fa-clock" },
-    { label: "Liên hệ", href: "#lien-he", icon: "fas fa-envelope" },
     {
       label: "Dân tộc",
       href: "#dan-toc",
@@ -81,6 +80,7 @@ $(document).ready(function () {
         },
       ],
     },
+    { label: "Liên hệ", href: "#lien-he", icon: "fas fa-envelope" },
   ];
 
   // Dữ liệu phần giới thiệu
@@ -408,7 +408,7 @@ $(document).ready(function () {
   // Fetch gallery từ API bên ngoài
   $("#gallery-grid").html(
     '<p style="text-align:center;padding:40px;color:#9a958d">' +
-    '<i class="fas fa-spinner fa-spin"></i> Đang tải thư viện ảnh...</p>'
+      '<i class="fas fa-spinner fa-spin"></i> Đang tải thư viện ảnh...</p>',
   );
 
   fetch(GALLERY_API_URL)
@@ -432,7 +432,7 @@ $(document).ready(function () {
       console.error("❌ Không tải được gallery từ API:", err.message);
       $("#gallery-grid").html(
         '<p style="text-align:center;padding:40px;color:#e74c3c">' +
-        '<i class="fas fa-exclamation-circle"></i> Không thể tải thư viện ảnh. Vui lòng thử lại sau.</p>'
+          '<i class="fas fa-exclamation-circle"></i> Không thể tải thư viện ảnh. Vui lòng thử lại sau.</p>',
       );
     });
 
