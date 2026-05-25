@@ -107,7 +107,13 @@ $(document).ready(function () {
     },
   ];
 
-  // Dữ liệu thư viện ảnh — load từ data.json bằng Fetch API
+  // ============================================================
+  //  FETCH GALLERY TỪ API BÊN NGOÀI (JSON/Fetch)
+  // ============================================================
+
+  // URL API bên ngoài
+  var GALLERY_API_URL = "https://api.npoint.io/5ef3e517e55fd8eb89f5";
+
   var galleryData = [];
 
   // Dữ liệu âm thanh
@@ -399,20 +405,34 @@ $(document).ready(function () {
   renderEthnic();
 
   // Fetch gallery data từ data.json
-  fetch("data.json")
+  // Fetch gallery từ API bên ngoài
+  $("#gallery-grid").html(
+    '<p style="text-align:center;padding:40px;color:#9a958d">' +
+    '<i class="fas fa-spinner fa-spin"></i> Đang tải thư viện ảnh...</p>'
+  );
+
+  fetch(GALLERY_API_URL)
     .then(function (response) {
-      if (!response.ok) throw new Error("HTTP error: " + response.status);
+      if (!response.ok) throw new Error("HTTP " + response.status);
       return response.json();
     })
     .then(function (data) {
-      galleryData = data.gallery;
+      if (Array.isArray(data)) {
+        galleryData = data;
+      } else if (data && Array.isArray(data.gallery)) {
+        galleryData = data.gallery;
+      } else {
+        throw new Error("Cấu trúc JSON không hợp lệ");
+      }
+      console.log("✅ Đã fetch gallery từ API:", GALLERY_API_URL);
       renderGallery("all");
       observeFadeUp();
     })
     .catch(function (err) {
-      console.error("Không tải được gallery:", err);
+      console.error("❌ Không tải được gallery từ API:", err.message);
       $("#gallery-grid").html(
-        '<p style="text-align:center;padding:40px;color:#9a958d">Không thể tải thư viện ảnh.</p>',
+        '<p style="text-align:center;padding:40px;color:#e74c3c">' +
+        '<i class="fas fa-exclamation-circle"></i> Không thể tải thư viện ảnh. Vui lòng thử lại sau.</p>'
       );
     });
 
