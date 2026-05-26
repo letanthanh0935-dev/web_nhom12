@@ -627,12 +627,8 @@ h3 {
   background: var(--bg-card);
   border-radius: 8px;
   margin-bottom: 15px;
-  transition: all 0.3s ease;
 }
 
-.audio-item:hover {
-  transform: translateX(5px);
-}
 
 .audio-btn {
   width: 50px;
