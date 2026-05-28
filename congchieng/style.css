@@ -133,7 +133,7 @@ h3 {
 
 .badge-small {
   display: inline-block;
-  border: 1px solid rgba(212, 168, 83, 1);
+  border: 1px solid rgba(212, 168, 83, 0.4);
   color: var(--gold);
   padding: 4px 12px;
   border-radius: 20px;
