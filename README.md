@@ -74,9 +74,9 @@ web_nhom12/
 
 | Thành viên | GitHub |
 |---|---|
-| Lê Tấn Thành | [@letanthanh0935-dev](https://github.com/letanthanh0935-dev) |
-| Nguyễn Xuân Huy | [@N-X-Huy](https://github.com/N-X-Huy) |
-| Pham Xuân Nghĩa | [PhamXuanNhia](https://github.com/PhamXuanNghia) |
+| Lê Tấn Thành | [letanthanh0935-dev](https://github.com/letanthanh0935-dev) |
+| Nguyễn Xuân Huy | [N-X-Huy](https://github.com/N-X-Huy) |
+| Phạm Xuân Nghĩa | [PhamXuanNhia](https://github.com/PhamXuanNghia) |
 ---
 
 ## Website Demo:
