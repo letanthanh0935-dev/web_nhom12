@@ -63,7 +63,7 @@ web_nhom12/
 ## Website Demo:
 
 ```
-[keen-fenglisu-f80b13.netlify.app](https://kaleidoscopic-cheesecake-7e9f6a.netlify.app/)
+https://kaleidoscopic-cheesecake-7e9f6a.netlify.app/
 ```
 
 ## Công cụ tạo API:
