@@ -1,4 +1,4 @@
-# Cồng Chiêng Tây Nguyên (Trang giới thiệu văn hóa di sản)
+Trang giới thiệu văn hóa Cồng chiêng
 
 Một trang web giới thiệu Không gian Văn hóa Cồng Chiêng Tây Nguyên — Di sản văn hóa phi vật thể đại diện của nhân loại, được UNESCO công nhận năm 2005. Bao gồm:
 
@@ -74,7 +74,7 @@ web_nhom12/
 
 | Thành viên | GitHub |
 |---|---|
-| Lê Tấn Thành | [letanthanh0935-dev](https://github.com/letanthanh0935-dev) |
+| Lê Tấn Thanh | [letanthanh0935-dev](https://github.com/letanthanh0935-dev) |
 | Nguyễn Xuân Huy | [N-X-Huy](https://github.com/N-X-Huy) |
 | Phạm Xuân Nghĩa | [PhamXuanNhia](https://github.com/PhamXuanNghia) |
 ---
