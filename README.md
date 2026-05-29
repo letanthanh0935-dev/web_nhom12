@@ -22,19 +22,6 @@ Dependencies được dùng trong dự án: `jQuery 4.0.0`, `Font Awesome 6.5.1`
 
 ---
 
-## Hướng dẫn chạy
-
-1. Clone repository về máy:
-
-```
-git clone https://github.com/letanthanh0935-dev/web_nhom12.git
-```
-
-2. Mở thư mục dự án:
-
-```
-cd web_nhom12/congchieng
-```
 
 3. Mở file `index.html` bằng trình duyệt (nhấp đúp hoặc kéo vào trình duyệt).
 
