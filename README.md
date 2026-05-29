@@ -63,11 +63,12 @@ web_nhom12/
 ## Website Demo:
 
 ```
-keen-fenglisu-f80b13.netlify.app
+[keen-fenglisu-f80b13.netlify.app](https://kaleidoscopic-cheesecake-7e9f6a.netlify.app/)
 ```
 
 ## Công cụ tạo API:
 
 ```
-[https://www.npoint.io](https://www.npoint.io/docs/5ef3e517e55fd8eb89f5?fbclid=IwY2xjawSGe1tleHRuA2FlbQIxMABicmlkETFzbVZ3cDg3T01yTGNTRVo2c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHqPn9Q8TeiC1xZsisYYj0Z2t4NuPqxCcpJihBrQbDdZGA-rvJSjPJlOOmCc8_aem_eFgWhhdAydMQo7_h3fDiuA)
+https://www.npoint.io/docs/5ef3e517e55fd8eb89f5
+
 ```
