@@ -1,4 +1,4 @@
-### Trang giới thiệu văn hóa Cồng chiêng
+## Trang giới thiệu văn hóa Cồng chiêng
 
 Một trang web giới thiệu Không gian Văn hóa Cồng Chiêng Tây Nguyên — Di sản văn hóa phi vật thể đại diện của nhân loại, được UNESCO công nhận năm 2005. Bao gồm:
 
