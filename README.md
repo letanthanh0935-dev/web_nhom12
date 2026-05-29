@@ -20,12 +20,6 @@ Một trang web giới thiệu Không gian Văn hóa Cồng Chiêng Tây Nguyên
 
 Dependencies được dùng trong dự án: `jQuery 4.0.0`, `Font Awesome 6.5.1`, `Google Fonts (Inter)`.
 
----
-
-
-3. Mở file `index.html` bằng trình duyệt (nhấp đúp hoặc kéo vào trình duyệt).
-
-Mở trình duyệt và xem trang web ngay lập tức — không cần server.
 
 ---
 
